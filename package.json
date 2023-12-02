@@ -5,7 +5,7 @@
   "author": "kixixixixi <kixixixixi@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "NODE_ENV=production next build && next export",
+    "build": "NODE_ENV=production next build",
     "dev": "next",
     "lint": "eslint ./**/*.{ts,tsx}",
     "prepare": "husky install"
