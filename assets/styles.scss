@@ -1,5 +1,10 @@
 @import "modern-css-reset";
 
+:root {
+  background: #0047ab;
+  color-scheme: dark;
+}
+
 * {
   font-family: sans-serif;
 }
