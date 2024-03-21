@@ -109,7 +109,7 @@ const IndexPage: NextPage = () => {
                 <dl>
                   <dt>Site</dt>
                   <dd style={{ paddingLeft: "2rem" }}>
-                    <a href="//relaod.co.jp">relaod.co.jp</a>
+                    <a href="//reload.co.jp">reload.co.jp</a>
                   </dd>
                 </dl>
               </div>
