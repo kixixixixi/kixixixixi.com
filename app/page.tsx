@@ -1,7 +1,48 @@
-import React from "react"
+"use client"
+
+import React, { ComponentProps, FC, useState } from "react"
 import { NextPage } from "next"
 
+const Card: FC<ComponentProps<"section">> = ({ children, style, ...props }) => (
+  <section
+    style={{
+      backfaceVisibility: "hidden",
+      background: "#e2e2e2",
+      border: "solid 1px #0047ab",
+      borderRadius: "1rem",
+      boxShadow: "rgba(0, 0, 0, 0.5) 2px 2px 2px 0px",
+      cursor: "pointer",
+      display: "flex",
+      flexFlow: "column",
+      height: "80vh",
+      gap: ".5rem",
+      justifyContent: "center",
+      maxWidth: "60rem",
+      padding: "1rem",
+      position: "absolute",
+      transition: "all 0.9s",
+      width: "90vw",
+      ...style,
+    }}
+    {...props}
+  >
+    <h1
+      style={{
+        color: "#0047ab",
+        fontSize: ".75rem",
+        fontWeight: "bold",
+        height: "2rem",
+        textAlign: "center",
+      }}
+    >
+      @kixixixixi
+    </h1>
+    {children}
+  </section>
+)
+
 const IndexPage: NextPage = () => {
+  const [isTurnedOver, setIsTurnedOver] = useState<boolean>(false)
   return (
     <>
       <div
@@ -13,31 +54,20 @@ const IndexPage: NextPage = () => {
           padding: "1.5rem",
         }}
       >
-        <section
+        <Card
+          onClick={() => setIsTurnedOver(false)}
           style={{
-            background: "#e8e8e8",
-            border: "solid 1px #0047ab",
-            borderRadius: "1rem",
-            boxShadow: "rgba(0, 0, 0, 0.5) 2px 2px 2px 0px",
-            display: "flex",
-            flexFlow: "column",
-            gap: ".5rem",
-            justifyContent: "space-around",
-            maxWidth: "60rem",
-            padding: "1rem",
-            width: "90vw",
+            opacity: isTurnedOver ? 1 : 0,
+            transform: isTurnedOver ? undefined : "rotateY(-180deg)",
+          }}
+        ></Card>
+        <Card
+          onClick={() => setIsTurnedOver(true)}
+          style={{
+            opacity: isTurnedOver ? 0 : 1,
+            transform: isTurnedOver ? "rotateY(180deg)" : "rotateY(0)",
           }}
         >
-          <h1
-            style={{
-              color: "#0047ab",
-              fontSize: ".75rem",
-              fontWeight: "bold",
-              textAlign: "center",
-            }}
-          >
-            @kixixixixi
-          </h1>
           <div
             style={{
               display: "flex",
@@ -115,7 +145,7 @@ const IndexPage: NextPage = () => {
               </div>
             </div>
           </div>
-        </section>
+        </Card>
       </div>
     </>
   )
