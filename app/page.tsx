@@ -1,5 +1,6 @@
 "use client"
 
+import { QR } from "components/qr"
 import React, { ComponentProps, FC, useState } from "react"
 
 const Card: FC<ComponentProps<"section">> = ({ children, style, ...props }) => (
@@ -20,7 +21,7 @@ const Card: FC<ComponentProps<"section">> = ({ children, style, ...props }) => (
       padding: "1rem",
       position: "absolute",
       transition: "all 0.9s",
-      width: "90vw",
+      width: "90dvw",
       ...style,
     }}
     {...props}
@@ -59,7 +60,11 @@ const IndexPage: FC = () => {
             opacity: isTurnedOver ? 1 : 0,
             transform: isTurnedOver ? undefined : "rotateY(-180deg)",
           }}
-        ></Card>
+        >
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <QR />
+          </div>
+        </Card>
         <Card
           onClick={() => setIsTurnedOver(true)}
           style={{
