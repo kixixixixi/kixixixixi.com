@@ -18,3 +18,8 @@ body {
   background-color: #026;
   color: #aaa;
 }
+
+a {
+  color: #d88;
+  text-decoration: none;
+}

@@ -40,6 +40,16 @@ const Card: FC<ComponentProps<"section">> = ({ children, style, ...props }) => (
   </section>
 )
 
+const DefinitionDescription: FC<ComponentProps<"dd">> = ({
+  style,
+  ...props
+}) => (
+  <dd
+    style={{ display: "flex", gap: ".5rem", paddingLeft: "2rem", ...style }}
+    {...props}
+  />
+)
+
 const IndexPage: FC = () => {
   const [isTurnedOver, setIsTurnedOver] = useState<boolean>(false)
   return (
@@ -131,19 +141,31 @@ const IndexPage: FC = () => {
               >
                 <dl>
                   <dt>Email</dt>
-                  <dd style={{ paddingLeft: "2rem" }}>yamamoto@reload.co.jp</dd>
+                  <DefinitionDescription>
+                    <a href="mailto:yamamoto@reload.co.jp">
+                      yamamoto@reload.co.jp
+                    </a>
+                  </DefinitionDescription>
                 </dl>
                 <dl>
                   <dt>Address</dt>
-                  <dd style={{ paddingLeft: "2rem" }}>
+                  <DefinitionDescription>
                     東京都千代田区神田多町2-9-6 第2田中ビル
-                  </dd>
+                  </DefinitionDescription>
                 </dl>
                 <dl>
                   <dt>Site</dt>
-                  <dd style={{ paddingLeft: "2rem" }}>
+                  <DefinitionDescription>
                     <a href="//reload.co.jp">reload.co.jp</a>
-                  </dd>
+                  </DefinitionDescription>
+                </dl>
+                <dl>
+                  <dt>Account</dt>
+                  <DefinitionDescription>
+                    <a href="//github.com/kixixixixi">Github</a>
+                    <a href="//facebook.com/kixixixixi">Facebook</a>
+                    <a href="//x.com/kixixixixi">X</a>
+                  </DefinitionDescription>
                 </dl>
               </div>
             </div>
