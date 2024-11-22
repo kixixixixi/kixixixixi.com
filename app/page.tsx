@@ -13,7 +13,7 @@ const Card: FC<ComponentProps<"section">> = ({ children, style, ...props }) => (
       cursor: "pointer",
       display: "flex",
       flexFlow: "column",
-      height: "80vh",
+      height: "80dvh",
       gap: ".5rem",
       justifyContent: "center",
       maxWidth: "60rem",
@@ -48,7 +48,7 @@ const IndexPage: FC = () => {
         style={{
           alignItems: "center",
           display: "flex",
-          height: "100vh",
+          height: "100dvh",
           justifyContent: "center",
           padding: "1.5rem",
         }}
