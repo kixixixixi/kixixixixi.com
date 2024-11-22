@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap");
 
 :root {
-  background: #0047ab;
+  background: #026;
   color-scheme: dark;
 }
 
@@ -11,10 +11,10 @@
 }
 
 html {
-  background-color: #0047ab;
+  background-color: #026;
 }
 
 body {
-  background-color: #0047ab;
-  color: #666;
+  background-color: #026;
+  color: #aaa;
 }

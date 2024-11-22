@@ -6,7 +6,8 @@ export const QR: FC<ComponentProps<"svg">> = ({ ...props }) => (
     xmlnsXlink="http://www.w3.org/1999/xlink"
     version="1.1"
     viewBox="0 0 290 290"
-    width={60}
+    width={80}
+    fill="#aaa"
     {...props}
   >
     <rect x="0" y="0" width="70" height="10"></rect>

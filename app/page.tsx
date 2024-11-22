@@ -7,9 +7,8 @@ const Card: FC<ComponentProps<"section">> = ({ children, style, ...props }) => (
   <section
     style={{
       backfaceVisibility: "hidden",
-      background: "#e2e2e2",
-      border: "solid 1px #0047ab",
-      borderRadius: "1rem",
+      background: "#222",
+      borderRadius: ".8rem",
       boxShadow: "rgba(0, 0, 0, 0.5) 2px 2px 2px 0px",
       cursor: "pointer",
       display: "flex",
@@ -28,7 +27,7 @@ const Card: FC<ComponentProps<"section">> = ({ children, style, ...props }) => (
   >
     <h1
       style={{
-        color: "#0047ab",
+        color: "#99c",
         fontSize: ".75rem",
         fontWeight: "bold",
         height: "2rem",
