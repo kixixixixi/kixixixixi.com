@@ -53,6 +53,23 @@ const DefinitionDescription: FC<ComponentProps<"dd">> = ({
   />
 )
 
+const Separator: FC<ComponentProps<"div">> = ({ ...props }) => (
+  <div style={{}} {...props}>
+    /
+  </div>
+)
+
+const WeekLine: FC<ComponentProps<"p">> = ({ style, ...props }) => (
+  <p
+    style={{
+      color: "#888",
+      textAlign: "center",
+      ...style,
+    }}
+    {...props}
+  />
+)
+
 const IndexPage: FC = () => {
   const [isTurnedOver, setIsTurnedOver] = useState<boolean>(false)
   return (
@@ -109,14 +126,7 @@ const IndexPage: FC = () => {
                 >
                   山本 翔平
                 </h1>
-                <p
-                  style={{
-                    color: "#999",
-                    textAlign: "center",
-                  }}
-                >
-                  Shohei Yamamoto
-                </p>
+                <WeekLine>Shohei Yamamoto</WeekLine>
               </div>
               <div>
                 <p
@@ -126,13 +136,15 @@ const IndexPage: FC = () => {
                 >
                   株式会社リロード 代表取締役社長
                 </p>
+                <WeekLine>Reload, Inc. CEO / Founder</WeekLine>
+              </div>
+              <div>
                 <p
                   style={{
-                    color: "#999",
                     textAlign: "center",
                   }}
                 >
-                  Reload, Inc. CEO / Founder
+                  FFFFF Cafe Manager
                 </p>
               </div>
             </div>
@@ -160,13 +172,17 @@ const IndexPage: FC = () => {
                   <dt>Site</dt>
                   <DefinitionDescription>
                     <a href="//reload.co.jp">reload.co.jp</a>
+                    <Separator />
+                    <a href="//fffff-cafe.com">FFFFF Cafe</a>
                   </DefinitionDescription>
                 </dl>
                 <dl>
                   <dt>Account</dt>
                   <DefinitionDescription>
                     <a href="//github.com/kixixixixi">Github</a>
+                    <Separator />
                     <a href="//facebook.com/kixixixixi">Facebook</a>
+                    <Separator />
                     <a href="//x.com/kixixixixi">X</a>
                   </DefinitionDescription>
                 </dl>
