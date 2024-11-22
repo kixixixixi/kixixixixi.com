@@ -1,7 +1,6 @@
 "use client"
 
 import React, { ComponentProps, FC, useState } from "react"
-import { NextPage } from "next"
 
 const Card: FC<ComponentProps<"section">> = ({ children, style, ...props }) => (
   <section
@@ -41,7 +40,7 @@ const Card: FC<ComponentProps<"section">> = ({ children, style, ...props }) => (
   </section>
 )
 
-const IndexPage: NextPage = () => {
+const IndexPage: FC = () => {
   const [isTurnedOver, setIsTurnedOver] = useState<boolean>(false)
   return (
     <>
