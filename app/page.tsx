@@ -15,7 +15,7 @@ const Card: FC<ComponentProps<"section">> = ({ children, style, ...props }) => (
       flexFlow: "column",
       height: "80dvh",
       gap: ".5rem",
-      justifyContent: "center",
+      justifyContent: "space-evenly",
       maxWidth: "60rem",
       padding: "1rem",
       position: "absolute",
@@ -31,7 +31,10 @@ const Card: FC<ComponentProps<"section">> = ({ children, style, ...props }) => (
         fontSize: ".75rem",
         fontWeight: "bold",
         height: "2rem",
+        left: "1rem",
+        position: "absolute",
         textAlign: "center",
+        top: ".5rem",
       }}
     >
       @kixixixixi
@@ -92,7 +95,7 @@ const IndexPage: FC = () => {
               style={{
                 margin: "auto",
                 maxWidth: "28rem",
-                padding: "5rem 0",
+                padding: "2rem 0",
                 width: "100%",
               }}
             >
