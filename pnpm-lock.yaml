@@ -60,9 +60,6 @@ importers:
       prettier:
         specifier: ^3.1.0
         version: 3.1.0
-      sass:
-        specifier: ^1.69.5
-        version: 1.69.5
       typescript:
         specifier: ^5.3.2
         version: 5.3.2
@@ -1653,6 +1650,7 @@ snapshots:
     dependencies:
       normalize-path: 3.0.0
       picomatch: 2.3.1
+    optional: true
 
   argparse@2.0.1: {}
 
@@ -1723,7 +1721,8 @@ snapshots:
 
   balanced-match@1.0.2: {}
 
-  binary-extensions@2.2.0: {}
+  binary-extensions@2.2.0:
+    optional: true
 
   brace-expansion@1.1.11:
     dependencies:
@@ -1772,6 +1771,7 @@ snapshots:
       readdirp: 3.6.0
     optionalDependencies:
       fsevents: 2.3.3
+    optional: true
 
   cli-cursor@5.0.0:
     dependencies:
@@ -2212,7 +2212,8 @@ snapshots:
 
   ignore@5.3.0: {}
 
-  immutable@4.3.4: {}
+  immutable@4.3.4:
+    optional: true
 
   import-fresh@3.3.0:
     dependencies:
@@ -2251,6 +2252,7 @@ snapshots:
   is-binary-path@2.1.0:
     dependencies:
       binary-extensions: 2.2.0
+    optional: true
 
   is-boolean-object@1.1.2:
     dependencies:
@@ -2487,7 +2489,8 @@ snapshots:
       - '@babel/core'
       - babel-plugin-macros
 
-  normalize-path@3.0.0: {}
+  normalize-path@3.0.0:
+    optional: true
 
   npm-run-path@5.1.0:
     dependencies:
@@ -2623,6 +2626,7 @@ snapshots:
   readdirp@3.6.0:
     dependencies:
       picomatch: 2.3.1
+    optional: true
 
   reflect.getprototypeof@1.0.4:
     dependencies:
@@ -2684,6 +2688,7 @@ snapshots:
       chokidar: 3.5.3
       immutable: 4.3.4
       source-map-js: 1.0.2
+    optional: true
 
   scheduler@0.23.0:
     dependencies:

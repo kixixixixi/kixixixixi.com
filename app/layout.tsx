@@ -1,6 +1,6 @@
 "use client"
 import type React from "react"
-import "../assets/styles.scss"
+import "../assets/styles.css"
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
