@@ -4,7 +4,7 @@ import "../assets/styles.css"
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html lang="ja_jp">
+    <html lang="ja">
       <head>
         <meta charSet="utf-8" />
         <meta
