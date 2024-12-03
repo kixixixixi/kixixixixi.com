@@ -70,6 +70,22 @@ const WeekLine: FC<ComponentProps<"p">> = ({ style, ...props }) => (
   />
 )
 
+const ExternalLink: FC<ComponentProps<"a">> = ({
+  style,
+  children,
+  ...props
+}) => (
+  <a
+    style={{ ...style }}
+    onClick={(e) => e.stopPropagation()}
+    aria-hidden={true}
+    target="_blank"
+    {...props}
+  >
+    {children}
+  </a>
+)
+
 const IndexPage: FC = () => {
   const [isTurnedOver, setIsTurnedOver] = useState<boolean>(false)
   return (
@@ -171,19 +187,27 @@ const IndexPage: FC = () => {
                 <dl>
                   <dt>Site</dt>
                   <DefinitionDescription>
-                    <a href="//reload.co.jp">reload.co.jp</a>
+                    <ExternalLink href="//reload.co.jp">
+                      reload.co.jp
+                    </ExternalLink>
                     <Separator />
-                    <a href="//fffff-cafe.com">FFFFF Cafe</a>
+                    <ExternalLink href="//fffff-cafe.com">
+                      FFFFF Cafe
+                    </ExternalLink>
                   </DefinitionDescription>
                 </dl>
                 <dl>
                   <dt>Account</dt>
                   <DefinitionDescription>
-                    <a href="//github.com/kixixixixi">Github</a>
+                    <ExternalLink href="//github.com/kixixixixi">
+                      Github
+                    </ExternalLink>
                     <Separator />
-                    <a href="//facebook.com/kixixixixi">Facebook</a>
+                    <ExternalLink href="//facebook.com/kixixixixi">
+                      Facebook
+                    </ExternalLink>
                     <Separator />
-                    <a href="//x.com/kixixixixi">X</a>
+                    <ExternalLink href="//x.com/kixixixixi">X</ExternalLink>
                   </DefinitionDescription>
                 </dl>
               </div>
