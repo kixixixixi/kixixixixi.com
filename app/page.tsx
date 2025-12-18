@@ -181,7 +181,7 @@ const IndexPage: FC = () => {
                 <dl>
                   <dt>Address</dt>
                   <DefinitionDescription>
-                    東京都千代田区神田多町2-9-6 第2田中ビル
+                    東京都千代田区神田佐久間町3-37-1 山茂登ビル3F
                   </DefinitionDescription>
                 </dl>
                 <dl>
