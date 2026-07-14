@@ -7,7 +7,7 @@ const Card: FC<ComponentProps<"section">> = ({ children, style, ...props }) => (
   <section
     style={{
       backfaceVisibility: "hidden",
-      background: "#222",
+      background: "#161616",
       borderRadius: ".8rem",
       boxShadow: "rgba(0, 0, 0, 0.5) 2px 2px 2px 0px",
       display: "flex",

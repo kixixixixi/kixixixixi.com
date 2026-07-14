@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&display=swap");
 
 :root {
-  background: #026;
+  background: #148;
   color-scheme: dark;
 }
 
@@ -11,11 +11,11 @@
 }
 
 html {
-  background-color: #026;
+  background-color: #148;
 }
 
 body {
-  background-color: #026;
+  background-color: #148;
   color: #aab;
 }
 
