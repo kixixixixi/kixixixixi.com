@@ -9,25 +9,24 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+
+      - name: setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
 
       - name: setup node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v4
         with:
           node-version: "21.x"
+          cache: "pnpm"
 
-      - name: Cache dependencies
-        uses: actions/cache@v1
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
       - name: Install
-        run: yarn
+        run: pnpm install
 
       - name: Build
-        run: yarn build
+        run: pnpm build
 
       - name: Add nojekyll
         run: touch ./out/.nojekyll
