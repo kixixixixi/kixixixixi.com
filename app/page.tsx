@@ -9,7 +9,8 @@ const Card: FC<ComponentProps<"section">> = ({ children, style, ...props }) => (
       backfaceVisibility: "hidden",
       background: "#161616",
       borderRadius: ".8rem",
-      boxShadow: "rgba(0, 0, 0, 0.5) 2px 2px 2px 0px",
+      boxShadow:
+        "0 1px 2px rgba(0, 0, 0, 0.6), 0 8px 24px rgba(0, 0, 0, 0.45), 0 24px 60px rgba(0, 0, 0, 0.3)",
       display: "flex",
       flexFlow: "column",
       height: "80dvh",
@@ -66,6 +67,20 @@ const FlipButton: FC<ComponentProps<"button">> = ({ style, ...props }) => (
   >
     ⇄
   </button>
+)
+
+const DefinitionTerm: FC<ComponentProps<"dt">> = ({ style, ...props }) => (
+  <dt
+    style={{
+      color: "#778",
+      fontSize: ".7rem",
+      fontWeight: 600,
+      letterSpacing: ".08em",
+      textTransform: "uppercase",
+      ...style,
+    }}
+    {...props}
+  />
 )
 
 const DefinitionDescription: FC<ComponentProps<"dd">> = ({
@@ -213,7 +228,7 @@ const IndexPage: FC = () => {
                 style={{ display: "flex", flexFlow: "column", padding: "1rem" }}
               >
                 <dl>
-                  <dt>Email</dt>
+                  <DefinitionTerm>Email</DefinitionTerm>
                   <DefinitionDescription>
                     <a href="mailto:yamamoto@reload.co.jp">
                       yamamoto@reload.co.jp
@@ -221,13 +236,13 @@ const IndexPage: FC = () => {
                   </DefinitionDescription>
                 </dl>
                 <dl>
-                  <dt>Address</dt>
+                  <DefinitionTerm>Address</DefinitionTerm>
                   <DefinitionDescription>
                     東京都千代田区神田佐久間町3-37-1 山茂登ビル3F
                   </DefinitionDescription>
                 </dl>
                 <dl>
-                  <dt>Site</dt>
+                  <DefinitionTerm>Site</DefinitionTerm>
                   <DefinitionDescription>
                     <ExternalLink href="//reload.co.jp">
                       reload.co.jp
@@ -239,7 +254,7 @@ const IndexPage: FC = () => {
                   </DefinitionDescription>
                 </dl>
                 <dl>
-                  <dt>Account</dt>
+                  <DefinitionTerm>Account</DefinitionTerm>
                   <DefinitionDescription>
                     <ExternalLink href="//github.com/kixixixixi">
                       Github
