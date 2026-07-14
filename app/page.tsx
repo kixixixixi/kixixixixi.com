@@ -175,7 +175,11 @@ const IndexPage: FC = () => {
                     textAlign: "center",
                   }}
                 >
-                  株式会社リロード 代表取締役社長
+                  <span style={{ fontSize: "1.2em", fontWeight: "bold" }}>
+                    株式会社リロード
+                  </span>
+                  <br />
+                  代表取締役社長
                 </p>
                 <WeekLine>Reload, Inc. CEO / Founder</WeekLine>
               </div>
