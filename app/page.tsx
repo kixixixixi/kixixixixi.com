@@ -10,7 +10,6 @@ const Card: FC<ComponentProps<"section">> = ({ children, style, ...props }) => (
       background: "#222",
       borderRadius: ".8rem",
       boxShadow: "rgba(0, 0, 0, 0.5) 2px 2px 2px 0px",
-      cursor: "pointer",
       display: "flex",
       flexFlow: "column",
       height: "80dvh",
@@ -41,6 +40,32 @@ const Card: FC<ComponentProps<"section">> = ({ children, style, ...props }) => (
     </h1>
     {children}
   </section>
+)
+
+const FlipButton: FC<ComponentProps<"button">> = ({ style, ...props }) => (
+  <button
+    aria-label="カードを反転"
+    style={{
+      alignItems: "center",
+      background: "#333",
+      border: "none",
+      borderRadius: "50%",
+      bottom: "1rem",
+      color: "#99c",
+      cursor: "pointer",
+      display: "flex",
+      fontSize: "1.2rem",
+      height: "2.5rem",
+      justifyContent: "center",
+      position: "absolute",
+      right: "1rem",
+      width: "2.5rem",
+      ...style,
+    }}
+    {...props}
+  >
+    ⇄
+  </button>
 )
 
 const DefinitionDescription: FC<ComponentProps<"dd">> = ({
@@ -100,7 +125,6 @@ const IndexPage: FC = () => {
         }}
       >
         <Card
-          onClick={() => setIsTurnedOver(false)}
           style={{
             opacity: isTurnedOver ? 1 : 0,
             transform: isTurnedOver ? undefined : "rotateY(-180deg)",
@@ -109,14 +133,15 @@ const IndexPage: FC = () => {
           <div style={{ display: "flex", justifyContent: "center" }}>
             <QR />
           </div>
+          <FlipButton onClick={() => setIsTurnedOver(false)} />
         </Card>
         <Card
-          onClick={() => setIsTurnedOver(true)}
           style={{
             opacity: isTurnedOver ? 0 : 1,
             transform: isTurnedOver ? "rotateY(180deg)" : "rotateY(0)",
           }}
         >
+          <FlipButton onClick={() => setIsTurnedOver(true)} />
           <div
             style={{
               display: "flex",
