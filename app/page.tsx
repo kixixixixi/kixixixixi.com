@@ -16,7 +16,7 @@ const Card: FC<ComponentProps<"section">> = ({ children, style, ...props }) => (
       gap: ".5rem",
       justifyContent: "space-evenly",
       maxWidth: "60rem",
-      padding: "1rem",
+      overflow: "hidden",
       position: "absolute",
       transition: "all 0.9s",
       width: "90dvw",
@@ -145,13 +145,18 @@ const IndexPage: FC = () => {
           <div
             style={{
               display: "flex",
+              flex: 1,
               flexWrap: "wrap",
               justifyContent: "space-between",
             }}
           >
             <div
               style={{
-                margin: "auto",
+                background: "#148",
+                display: "flex",
+                flex: "1 1 18rem",
+                flexFlow: "column",
+                justifyContent: "center",
                 maxWidth: "28rem",
                 padding: "2rem 0",
                 width: "100%",
@@ -194,7 +199,15 @@ const IndexPage: FC = () => {
               </div>
             </div>
             <div
-              style={{ maxWidth: "28rem", padding: "2rem 0", width: "100%" }}
+              style={{
+                display: "flex",
+                flex: "1 1 18rem",
+                flexFlow: "column",
+                justifyContent: "center",
+                maxWidth: "28rem",
+                padding: "2rem 0",
+                width: "100%",
+              }}
             >
               <div
                 style={{ display: "flex", flexFlow: "column", padding: "1rem" }}
